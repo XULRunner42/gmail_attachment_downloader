@@ -1,15 +1,22 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 #This script is baised on http://snippets.dzone.com/posts/show/7530
+require 'iconv'
 
-username = "username@gmail.com"
-password = "pa$sword"
-look_in_folder = "gmail_label_of_the_messages_whose_attachments_you_want_downloaded"
-move_downloaded_mails_to_folder = "gmail_label_to_be_applied_for_processed_emails"
-save_to_folder = "/path/to/folder/where/attachments/will/be/saved"
+username = "kingdon@tuesdaystudios.com"
+password = "p$ssav0rd"
+look_in_folder = "outbocks"
+move_downloaded_mails_to_folder = "outbocks-tmailed"
+save_to_folder = "/home/yebyen/attachments/outbocks/"
 
 require 'net/imap'
 require 'rubygems'
 require 'tmail'
+
+class String
+  def is_binary_data?
+    true # Have I royally fouled up everything?
+  end
+end
 
 # This is a convenience monkey patch
 class Net::IMAP
