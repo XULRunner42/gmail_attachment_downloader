@@ -3,7 +3,7 @@
 require 'iconv'
 
 username = "kingdon@tuesdaystudios.com"
-password = "p$ssav0rd"
+password = "shitdoesn't work"
 look_in_folder = "outbocks"
 move_downloaded_mails_to_folder = "outbocks-tmailed"
 save_to_folder = "/home/yebyen/attachments/outbocks/"
